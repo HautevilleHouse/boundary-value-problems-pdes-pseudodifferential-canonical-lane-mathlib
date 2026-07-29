@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import BoundaryValueProblemsPdesPseudodifferentialCanonicalLaneLean.BoundaryTraceOperator
+import BoundaryValueProblemsPdesPseudodifferentialCanonicalLaneLean.PseudodifferentialCalculus
+import BoundaryValueProblemsPdesPseudodifferentialCanonicalLaneLean.EllipticRegularity
+
+namespace HautevilleHouse
+namespace BoundaryValueProblemsPdesPseudodifferentialCanonicalLaneLean
+
+def ConstrainedBoundaryValueClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_boundary_value_endgame (A : AdmissibleClass) :
+    ConstrainedBoundaryValueClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end BoundaryValueProblemsPdesPseudodifferentialCanonicalLaneLean
+end HautevilleHouse

@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import BVPPAdmittedObject
+import BridgeLemmas
+import GateLemmas
+import FinalTheorem
+import PseudodifferentialOperators
+import BoundaryConditions
+import WellPosedness
+
+namespace HautevilleHouse
+namespace BoundaryValueProblemsPdesPseudodifferentialCanonicalLaneLean
+
+theorem bvpp_canonical_lane_lean : ConstrainedBVPPClosure default := by
+  exact constrained_bvpp_endgame default
+
+end BoundaryValueProblemsPdesPseudodifferentialCanonicalLaneLean
+end HautevilleHouse
